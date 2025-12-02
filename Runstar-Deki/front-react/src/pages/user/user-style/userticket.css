@@ -1,0 +1,156 @@
+
+/* =================== google-font-Roboto & Ek-mesirri =================== */
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Roboto", sans-serif; */
+/* font-family: "El Messiri", sans-serif; */
+
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+:root {
+    --main-color: #ff0000;
+    --second-color: #780116;
+    --bg-color: #fffffc;
+    --back-color: #edf6f9af;
+    --text-color: #220901;
+    --light-hover: #ff0101ca;
+        --muted: #9aa6b2;
+        --radius: 12px;
+        --gap: 24px;
+        --max-width: 1200px;
+        --text: #e6eef6;
+        --glass: rgba(255, 255, 255, 0.02);
+    }
+
+    .container-fluid {
+  --bs-gutter-x: 0 !important;
+}
+h1, h2, h3, h4, h5{
+    font-family: "El Messiri", sans-serif;
+    font-weight: 800;
+    color: var(--second-color);
+}
+
+
+/* -------------------------style for ticket---------------------------- */
+  .ticket-container {
+    background: var(--section-bg-color);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .ticket-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .ticket-header img {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .ticket-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--second-color);
+    margin: 0;
+  }
+
+  .ticket-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  .section-title {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--main-color);
+    border-left: 4px solid var(--main-color);
+    padding-left: 10px;
+    margin-bottom: 12px;
+  }
+
+  table.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+  }
+
+  table.custom-table td {
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+  }
+
+  table.custom-table tr td:first-child {
+    font-weight: 600;
+    width: 35%;
+    background: rgba(255, 0, 0, 0.06);
+  }
+
+  .qr-box {
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+
+  .note-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  .btn-print,
+  .btn-download {
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 7px 18px;
+  }
+
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+
+    #ticket-area,
+    #ticket-area * {
+      visibility: visible;
+    }
+
+    #ticket-area {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    button {
+      display: none !important;
+    }
+
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+
+    .ticket-container {
+      padding: 15px !important;
+      font-size: 12px !important;
+    }
+
+    table.custom-table td {
+      padding: 6px 8px !important;
+      font-size: 11px !important;
+    }
+
+    .qr-box {
+      transform: scale(0.85);
+      transform-origin: top right;
+    }
+  }

@@ -1,0 +1,129 @@
+/* =================== google-font-Roboto & Ek-mesirri =================== */
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Roboto", sans-serif; */
+/* font-family: "El Messiri", sans-serif; */
+
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+:root{
+    --main-color: #ff0000;
+    --second-color: #780116;
+    --bg-color: #fffffc;
+    --back-color: #edf6f9af;
+    --text-color: #220901;
+    --light-hover: #ff0101ca;
+}
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.body{
+    color: #220901;
+    background-color: var(--back-color);
+    line-height: 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    min-width: 100vh;
+}
+/* .page-main-div{
+    z-index: 9999;
+} */
+h1, h2, h3, h4, h5{
+    font-family: "El Messiri", sans-serif;
+    font-weight: 800;
+}
+.admin-main{
+    padding: 0;
+    background-color: transparent;
+    min-height: 100vh;
+    border-left: 0.5px solid var(--main-color);
+}
+
+/* --------------------------style for top boxes ---------------------------- */
+.hello{
+    border: 0.3px solid var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: .6rem;
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.style-hello, .style-hello-graph{
+    position: absolute;
+    width: 100.1%;
+    height: 50px;
+    left: 0;
+    bottom: -10px;
+    z-index: -3;
+    border: 2px solid var(--main-color);
+    border-radius: .6rem;
+    background-color: var(--main-color);
+}
+.p-top-saler, .p-graph{
+    position: relative;
+}
+.style-hello-topsale{
+    position: absolute;
+    width: 96.8%;
+    height: 50px;
+    left: 1.5%;
+    bottom: -2px;
+    z-index: -3;
+    border: 0.3px solid var(--main-color);
+    border-radius: .6rem;
+    background-color: var(--main-color);
+}
+
+
+/* --------------------------style for top sale section----------------------------- */
+
+    .top-saler-table-title {
+      font-weight: 600;
+      text-align: center;
+      color: #333;
+    }
+
+    .top-saler-profile-pic {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ddd;
+    }
+    .top-saler-container table td{
+        padding: .4rem;
+    }
+    .top-saler-text-main {
+      color: #ff0000;
+      font-weight: 500;
+    }
+
+    .table th {
+      background: #f0f0f0;
+    }
+
+    .table-hover tbody tr:hover {
+      background-color: #f8a9a9;
+    }
+
+
+
+    .graph, .top-saler {
+        background: var(--bg-color);
+        border: .3px solid var(--main-color);
+        border-radius: 15px;
+        position: relative;
+        height: 358px;
+        width: 100%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .chart-container {
+        background: var(--bg-color);
+        position: absolute;
+        height: 300px; /* adjust as you like */
+        width: 95%;
+    }
+    
