@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./adminnavbar.css";
 
 export default function Navbar() {
@@ -31,11 +31,13 @@ export default function Navbar() {
     setOpen((prev) => !prev);
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("user");
-    setUser(null);
-    window.location.reload(); 
-  };
+  const navigate = useNavigate();
+
+const handleLogout = () => {
+  localStorage.removeItem("user"); // clear auth user data
+  setUser(null);                   // clear state
+  navigate("/");                   // redirect to root route
+};
 
   return (
     <nav className="navbar sticky-top" id="header">
@@ -49,7 +51,7 @@ export default function Navbar() {
 
         {/* Role Panel */}
         <div className="col-auto ms-auto">
-          <h4 className="panel">{user ? user.role : "Guest"} Panel</h4>
+          <h4 className="panel">{user ? user.role : "Admin"} Panel</h4>
         </div>
 
         {/* Notification + Profile */}

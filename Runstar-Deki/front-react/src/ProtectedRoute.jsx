@@ -5,7 +5,7 @@ export default function ProtectedRoute({ children, role }) {
   const userRole = localStorage.getItem("role");
 
   if (!token) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/login" replace />;
   }
 
   // Role mismatch check

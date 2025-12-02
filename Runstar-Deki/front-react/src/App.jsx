@@ -18,8 +18,8 @@ function App() {
 
 
         <Route path="/" element={<UserLayout/>}>
-            <Route path="/" element={<Home />} />
-            <Route path="/register" element={<Registration />} />
+          <Route index element={<Home />} />
+          <Route path="register" element={<Registration />} />
         </Route>
 
         {/* Protected Routes with role */}
